@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sathwik Malyala: business and product analyst. Case studies of tools and analyses built at Meesho and beyond.">
+<title>Sathwik Malyala Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column; each case = text left, before→after result meter right, stacking on phones */
+:root {
+  --bg: #f6f8fa;
+  --surface: #ffffff;
+  --ink: #15202b;
+  --muted: #56636f;
+  --line: #d9e0e7;
+  --accent: #1f5fbf;
+  --accent-soft: #e3ecf9;
+  --before: #b9c3cd;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f151b; --surface: #161e26; --ink: #e6ecf1; --muted: #9aa8b5;
+    --line: #26323d; --accent: #78a8f0; --accent-soft: #1b2b42; --before: #3a4855;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f151b; --surface: #161e26; --ink: #e6ecf1; --muted: #9aa8b5;
+  --line: #26323d; --accent: #78a8f0; --accent-soft: #1b2b42; --before: #3a4855;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 880px; margin: 0 auto; padding-block: 56px 72px; display: grid; gap: 56px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+
+/* Header */
+header { display: grid; gap: 18px; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+h1 { font-size: clamp(36px, 6vw, 56px); font-weight: 800; line-height: 1.02; letter-spacing: -.02em; }
+.lede { font-size: 19px; max-width: 62ch; margin: 0; color: var(--ink); }
+.lede em { font-style: normal; color: var(--accent); font-weight: 600; }
+.contact { display: flex; flex-wrap: wrap; gap: 8px 22px; font-family: var(--font-mono); font-size: 14px; margin: 0; padding: 0; list-style: none; }
+.contact span { color: var(--muted); margin-right: 6px; }
+.note { font-size: 14px; color: var(--muted); margin: 0; max-width: 62ch; }
+
+/* Section heads */
+.section { display: grid; gap: 8px; }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 8px; margin-bottom: 8px; }
+.section-head h2 { font-size: 22px; font-weight: 700; }
+.section-head p { margin: 0; font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+
+/* Case */
+.case { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 28px; padding-block: 26px; border-bottom: 1px solid var(--line); }
+.case:last-child { border-bottom: 0; }
+.case-text { min-width: 0; display: grid; gap: 10px; }
+.tag { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: .04em; }
+.case h3 { font-size: 22px; font-weight: 700; line-height: 1.2; }
+dl { margin: 4px 0 0; display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 8px 16px; }
+dt { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-top: 3px; }
+dd { margin: 0; max-width: 60ch; }
+.hindsight { font-size: 15px; color: var(--muted); font-style: italic; margin: 4px 0 0; max-width: 64ch; }
+
+/* Result meter */
+.result { align-self: start; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px; display: grid; gap: 12px; font-variant-numeric: tabular-nums; }
+.result-label { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0; }
+.big { font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1; color: var(--accent); margin: 0; letter-spacing: -.02em; }
+.big small { display: block; margin-top: 6px; font-family: var(--font-mono); font-size: 13px; color: var(--muted); font-weight: 500; letter-spacing: 0; }
+.bars { display: grid; gap: 7px; }
+.bar { display: grid; grid-template-columns: 48px minmax(0, 1fr) 42px; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.track { height: 8px; background: var(--accent-soft); border-radius: 4px; overflow: hidden; }
+.fill { height: 100%; border-radius: 4px; background: var(--accent); }
+.fill.was { background: var(--before); }
+.bar b { color: var(--ink); font-weight: 600; text-align: right; }
+.sub { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.45; }
+
+/* Compact lists */
+.mini { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; padding-top: 8px; }
+.mini article { display: grid; gap: 6px; align-content: start; }
+.mini h3 { font-size: 18px; font-weight: 700; }
+.mini p { margin: 0; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 0 0; margin: 0; list-style: none; }
+.tools li { font-family: var(--font-mono); font-size: 13px; border: 1px solid var(--line); background: var(--surface); padding: 4px 10px; border-radius: 4px; }
+footer { font-size: 14px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 20px; }
+
+@media (max-width: 680px) {
+  .wrap { padding-block: 36px 56px; gap: 44px; }
+  .case { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .mini { grid-template-columns: minmax(0, 1fr); }
+  dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  dd { margin-bottom: 8px; }
+  .section-head { flex-direction: column; align-items: flex-start; gap: 2px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Business Analyst, Meesho · B.Tech CSE, IIITDM Jabalpur '26</p>
+    <h1>Sathwik Malyala</h1>
+    <p class="lede">I find the real problem, <em>build the tool that fixes it</em>, and stay with it until people actually use it. Most of my work sits where AI products, experiments and consumer credit meet.</p>
+    <ul class="contact">
+      <li><span>Email</span>malyalasathwik@gmail.com</li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/sathwik-malyala/" target="_blank" rel="noopener">sathwik-malyala</a></li>
+      <li><span>GitHub</span><a href="https://github.com/satcode8" target="_blank" rel="noopener">satcode8</a></li>
+    </ul>
+    <p class="note">The Meesho tools below are internal, so they're described here rather than linked. Happy to walk through how any of them work, including what broke and how I fixed it.</p>
+  </header>
+
+  <section class="section" aria-labelledby="built">
+    <div class="section-head">
+      <h2 id="built">Things I built and shipped</h2>
+      <p>Problem → build → result</p>
+    </div>
+
+    <article class="case">
+      <div class="case-text">
+        <span class="tag">Meesho · Internal tool · Built from scratch</span>
+        <h3>AI query validation app</h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>Our team spent most of a day by hand checking whether an AI analytics tool was writing correct SQL. The work was repetitive, and errors were easy to miss when tired.</dd>
+          <dt>Built</dt>
+          <dd>An app that runs a fixed set of test questions through the AI, compares its queries and their results against source-of-truth SQL, and flags only the mismatches for a person to review.</dd>
+          <dt>Result</dt>
+          <dd>Daily manual checking dropped by 60%. People now spend their time on the cases that need judgment.</dd>
+        </dl>
+      </div>
+      <aside class="result" aria-label="Result">
+        <p class="result-label">Manual checking effort</p>
+        <p class="big">−60%</p>
+        <div class="bars">
+          <div class="bar"><span>Before</span><div class="track"><div class="fill was" style="width:100%"></div></div><b>100</b></div>
+          <div class="bar"><span>After</span><div class="track"><div class="fill" style="width:40%"></div></div><b>40</b></div>
+        </div>
+        <p class="sub">Daily effort, indexed to 100 before the app.</p>
+      </aside>
+    </article>
+
+    <article class="case">
+      <div class="case-text">
+        <span class="tag">Meesho · AI product rollout · 5 business units</span>
+        <h3>Getting an AI analytics tool adopted</h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>We co-built a Databricks Genie tool that lets non-technical teams ask business and A/B-test questions in plain language. By the third business unit, adoption had stalled at about 35%, and mostly among analysts, not the business users it was built for.</dd>
+          <dt>Did</dt>
+          <dd>Sat with business users to see how they actually worked. The blocker was a 5,000-row export limit: they needed larger datasets, so the tool didn't do their job. I documented examples and worked with our PM and Databricks, who shipped a fix in 3 days.</dd>
+          <dt>Result</dt>
+          <dd>Adoption rose to 80% across 5 business units, and analysts' ad-hoc SQL requests fell by half.</dd>
+        </dl>
+      </div>
+      <aside class="result" aria-label="Result">
+        <p class="result-label">Adoption</p>
+        <p class="big">80% <small>from 35%</small></p>
+        <div class="bars">
+          <div class="bar"><span>Before</span><div class="track"><div class="fill was" style="width:35%"></div></div><b>35%</b></div>
+          <div class="bar"><span>After</span><div class="track"><div class="fill" style="width:80%"></div></div><b>80%</b></div>
+        </div>
+        <p class="sub">Also: −50% ad-hoc SQL requests to analysts.</p>
+      </aside>
+    </article>
+
+    <article class="case">
+      <div class="case-text">
+        <span class="tag">Meesho · Lending collections · Field operations</span>
+        <h3>Field visit planning framework</h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>Field agents collecting on the high-ticket loan portfolio were meeting the borrower in fewer than 1 in 10 visits.</dd>
+          <dt>Built</dt>
+          <dd>A geo-spatial framework that gave agents location data to plan where and when to visit.</dd>
+          <dt>Result</dt>
+          <dd>In-person meeting success rose from under 10% to 60%.</dd>
+        </dl>
+      </div>
+      <aside class="result" aria-label="Result">
+        <p class="result-label">Meeting success rate</p>
+        <p class="big">60% <small>from &lt;10%</small></p>
+        <div class="bars">
+          <div class="bar"><span>Before</span><div class="track"><div class="fill was" style="width:10%"></div></div><b>&lt;10%</b></div>
+          <div class="bar"><span>After</span><div class="track"><div class="fill" style="width:60%"></div></div><b>60%</b></div>
+        </div>
+      </aside>
+    </article>
+
+    <article class="case">
+      <div class="case-text">
+        <span class="tag">Meesho · Lending collections · Mixpanel, SQL</span>
+        <h3>Repayment funnel and channel attribution</h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>Collections reminders went out across WhatsApp, calls and field visits, but it wasn't clear which ones actually caused repayment.</dd>
+          <dt>Did</dt>
+          <dd>Mapped the repayment journey in Mixpanel, from message sent, delivered and read, to link opened, to payment. Built an attribution and A/B testing framework across 6M+ transactions, crediting WhatsApp only when payment followed a read and click within a set window.</dd>
+          <dt>Result</dt>
+          <dd>Repeat, low-risk borrowers paid on time regardless of reminders, while first-time borrowers dropped off most. We shifted budget and effort from users who'd pay anyway to high-risk segments.</dd>
+        </dl>
+        <p class="hindsight">In hindsight: I'd add a small holdout that gets no reminders, to measure each message's true incremental effect instead of relying on read-and-click attribution.</p>
+      </div>
+      <aside class="result" aria-label="Scale">
+        <p class="result-label">Transactions analysed</p>
+        <p class="big">6M+</p>
+        <p class="sub">Across 3 channels: WhatsApp, calls and field visits.</p>
+      </aside>
+    </article>
+  </section>
+
+  <section class="section" aria-labelledby="more">
+    <div class="section-head">
+      <h2 id="more">Research, strategy and initiatives</h2>
+      <p>Outside the day job</p>
+    </div>
+    <div class="mini">
+      <article>
+        <span class="tag">Kyushu Electric, Japan · MIRAI Setu Fellow</span>
+        <h3>$330M market-entry analysis</h3>
+        <p>Analysed public energy and regulatory data in Python for a proposed renewable investment in India, and presented market-entry recommendations directly to senior executives. One of 40 fellows selected nationwide by the Government of Japan.</p>
+      </article>
+      <article>
+        <span class="tag">Patent published · App. No. 202521084231</span>
+        <h3>DiabEase smart insulin pen</h3>
+        <p>Started from the user problem: studied where elderly users without smartphones missed insulin doses, then co-designed a low-cost retrofit pen that tracks dosage.</p>
+      </article>
+      <article>
+        <span class="tag">Placement Cell · IIITDM Jabalpur</span>
+        <h3>University's first Japan Desk</h3>
+        <p>Co-started the desk and negotiated an MoU with the Indo-Japan Business Council to set up future corporate mentorship and language programs.</p>
+      </article>
+      <article>
+        <span class="tag">Student Senate · Elected</span>
+        <h3>45 more elective seats</h3>
+        <p>Spotted unmet demand for Japanese language electives and secured administrative approval for 45 additional seats, a 50% increase in capacity.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="tools">
+    <div class="section-head">
+      <h2 id="tools">What I work with</h2>
+    </div>
+    <ul class="tools">
+      <li>Python · pandas</li><li>SQL</li><li>PySpark</li><li>Databricks</li><li>Databricks Genie</li><li>Mixpanel</li><li>Metabase</li><li>Power BI</li><li>Git</li><li>A/B testing</li><li>LLM evaluation</li>
+    </ul>
+  </section>
+
+  <footer>Sathwik Malyala · Bengaluru · malyalasathwik@gmail.com</footer>
+</div>
+
+</body>
+</html>
